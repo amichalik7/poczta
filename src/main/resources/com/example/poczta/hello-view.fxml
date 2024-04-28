@@ -1,0 +1,43 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.RadioButton?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.text.Font?>
+<?import javafx.scene.text.Text?>
+
+
+<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="350.0" prefWidth="650.0" style="-fx-background-color: #FFFFFF;" xmlns="http://javafx.com/javafx/21" xmlns:fx="http://javafx.com/fxml/1" >
+    <children>
+        <VBox layoutX="36.0" layoutY="51.0" prefHeight="92.0" prefWidth="185.0" style="-fx-padding: 10; -fx-border-color: #000000; -fx-border-radius: 0;">
+            <children>
+                <RadioButton id="pocztowka" mnemonicParsing="false" style="-fx-padding: 5;" text="Pocztówka" />
+                <RadioButton id="list" mnemonicParsing="false" style="-fx-padding: 5;" text="List" />
+                <RadioButton id="paczka" mnemonicParsing="false" style="-fx-padding: 5;" text="Paczka" />
+            </children>
+        </VBox>
+        <Button id="sprawdz" layoutX="36.0" layoutY="165.0" mnemonicParsing="false" prefHeight="17.0" prefWidth="185.0" text="Sprawdź cenę" textAlignment="CENTER" />
+        <VBox layoutX="310.0" layoutY="51.0" prefHeight="228.0" prefWidth="296.0" style="-fx-padding: 15; -fx-border-color: #000000;">
+            <children>
+                <Text strokeType="OUTSIDE" strokeWidth="0.0" style="-fx-padding: 150;" text="Ulica z numerem" />
+                <TextField id="ulica" style="-fx-padding: 5;" />
+                <Text strokeType="OUTSIDE" strokeWidth="0.0" style="-fx-padding: 150;" text="Kod pocztowy" />
+                <TextField id="kod" maxWidth="100.0" style="-fx-padding: 5;" />
+                <Text strokeType="OUTSIDE" strokeWidth="0.0" style="-fx-padding: 150;" text="Miasto" />
+                <TextField id="maisto" style="-fx-padding: 5;" />
+            </children>
+        </VBox>
+        <Text layoutX="44.0" layoutY="56.0" smooth="false" stroke="WHITE" strokeType="OUTSIDE" strokeWidth="5.0" text="Rodzaj przesyłki" />
+        <Text layoutX="315.0" layoutY="56.0" stroke="WHITE" strokeType="OUTSIDE" strokeWidth="5.0" text="Dane adresowe" />
+        <Button id="zatwierdz" layoutX="37.0" layoutY="312.0" mnemonicParsing="false" prefHeight="27.0" prefWidth="576.0" text="Zatwierdź" />
+        <ImageView fitHeight="62.0" fitWidth="106.0" layoutX="36.0" layoutY="201.0" pickOnBounds="true" preserveRatio="true" />
+        <Text id="cena" layoutX="149.0" layoutY="225.0" strokeType="OUTSIDE" strokeWidth="0.0" wrappingWidth="67.0">
+            <font>
+                <Font size="20.0" />
+            </font>
+        </Text>
+    </children>
+</AnchorPane>
