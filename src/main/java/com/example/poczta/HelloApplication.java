@@ -17,9 +17,7 @@ public class HelloApplication extends Application {
     RadioButton pocztowka = new RadioButton();
     RadioButton list = new RadioButton();
     RadioButton paczka = new RadioButton();
-    TextField ulica = new TextField();
     TextField kod = new TextField();
-    TextField miasto = new TextField();
     Button sprawdz = new Button();
     Button zatwierdz = new Button();
     ToggleGroup grupa = new ToggleGroup();
@@ -44,7 +42,7 @@ public class HelloApplication extends Application {
         list.setToggleGroup(grupa);
         paczka.setToggleGroup(grupa);
         obraz = (ImageView) scene.lookup("#obraz");
-        obraz.setImage(new Image(getClass().getResource("pocztowka.png").toString()));
+        obraz.setImage(new Image(String.valueOf(getClass().getResource("pocztowka.png"))));
         zatwierdz = (Button) scene.lookup("#zatwierdz");
         cena = (Text) scene.lookup("#cena");
         sprawdz = (Button) scene.lookup("#sprawdz");
@@ -74,12 +72,11 @@ public class HelloApplication extends Application {
         zatwierdz.setOnAction(actionEvent -> {
             String tekst = kod.getText();
             try {
-                if (Integer.valueOf(tekst) >= 0 && tekst.length() == 5) {
+                if (Integer.parseInt(tekst) >= 0 && tekst.length() == 5) {
                     komunikat.setContentText("Dane zostały wprowadzone");
                     komunikat.show();
-                    System.out.println(tekst);
-                }
-                else {
+
+                } else {
                     komunikat.setContentText("Nieprawidłowa liczba cyfr w kodzie pocztowym");
                     komunikat.show();
                 }
